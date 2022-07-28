@@ -9,11 +9,8 @@
 <body>
     <form action='/' method="POST">
         {% csrf_token %}
-        <label for="name">Your name</label>
-        <input id="name" name='name' type="text">
-        <button>Submit</button>
-        {% if error %} <h2> Check the field </h2> {% endif %}
-    </form>
-    
+        {{form}}
+        <button>Submit</button>        
+    </form>    
 </body>
 </html>
