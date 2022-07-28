@@ -1,0 +1,10 @@
+{
+    "python.languageServer": "Pylance",
+    "files.associations": {
+        "**/*.html" : "html",
+        "**/templates/**/*.html" : "django-html",
+        "**/templates/**/*" : "django-txt",
+        "**/requirments{/**,*}.{txt,im}": "pip-requirments"
+    },
+    "emmet.includeLanguages": { "django-html": "html"}
+}
