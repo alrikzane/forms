@@ -5,5 +5,17 @@
 <h1>{{ review.user_name | title}}</h1>
 <p>Rated({{ review.rating }})</p>
 
-<p>{{review.review_text}}</p> 
+<p>{{review.review_text}}</p>
+{% if is_liked %}
+<P>This is my favorite!</P>
+{% else %}
+<form action="/reviews/liked" method = "POST">
+    {% csrf_token %}
+    <input type="hidden" name='review_id' value = {{review.id}}>
+    <button>like</button>
+</form>
+{% endif %}
+
+
+
 {% endblock body %}
